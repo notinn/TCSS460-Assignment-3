@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 3</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <!-- My CSS/JS -->
+        <script src="./resources/script.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-left py-3 mb-4 border-bottom">
+                <span class="fs-4">Assignment 3</span>
+            </header>
+        </div>
+        <div class="container">
+            <ul class="nav nav-tabs" id="tabParent" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="route_a_tab" data-bs-toggle="tab" data-bs-target="#route_a" type="button" 
+                        aria-controls="home" aria-selected="true">Cat Weights</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="readme-tab" data-bs-toggle="tab" data-bs-target="#readme" type="button" 
+                        aria-controls="home" aria-selected="false">About</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="tabContent">
+                <!-- route 1: CatNames -->
+                <div class="tab-pane fade show active" id="route_a" role="tabpanel" aria-labelledby="route_a_tab">
+                    <div class="p-4 mx-auto col-lg-10">
+                        <form class="p-4 p-md-5 border rounded-3 bg-light">
+                            <!-- Route 1: Cat Names -->
+                            <input type="button" id="catNamesSubmit" class="w-100 btn btn-lg btn-primary" value="Get Cat Names">
+                            <div id="cnResultDiv"></div>
+                        </form>
+                    </div>
+                    <div class="p-4 py-0 mx-auto col-lg-10">
+                        <form class="p-4 p-md-5 border rounded-3 bg-light">
+                            <!-- Route 2: Cat Weights -->
+                            <div class="form-floating mb-3">
+                                <input id="catWeightsName" class="form-control" type="text" placeholder="">
+                                <label for="catWeightsName">Name of cat (leave blank to see all weights)</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input id="catWeightsWeight" class="form-control" type="number" placeholder="">
+                                <label for="catWeightsWeight">Weight of cat (lbs)</label>
+                            </div>
+                            <input type="button" id="catWeightsSubmit" class="w-100 btn btn-lg btn-primary" value="Get/Update Cat Weight(s)">
+                            <div id="cwResultDiv"></div>
+                        </form>
+                    </div>
+                    <div class="p-4 mx-auto col-lg-10">
+                        <form class="p-4 p-md-5 border rounded-3 bg-light">
+                            <!-- Route 3: Cat Register -->
+                            <div class="form-floating mb-3">
+                                <input id="catRegisterName" class="form-control" type="text" placeholder="">
+                                <label for="catRegisterName">Name of cat to register</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input id="catRegisterWeight" class="form-control" type="number" placeholder="">
+                                <label for="catRegisterWeight">Weight of cat (lbs)</label>
+                            </div>
+                            <input type="button" id="catRegisterSubmit" class="w-100 btn btn-lg btn-primary" value="Register Cat">
+                            <div id="crResultDiv"></div>
+                        </form>
+                    </div>
+                    <div class="p-4 py-0 mx-auto col-lg-10">
+                        <form class="p-4 p-md-5 border rounded-3 bg-light">
+                            <!-- Route 4: Cat Delete -->
+                            <div class="form-floating mb-3">
+                                <input id="catDeleteName" class="form-control" type="text" placeholder="">
+                                <label for="catDeleteName">Name of cat to delete</label>
+                            </div>
+                            <input type="button" id="catDeleteSubmit" class="w-100 btn btn-lg btn-primary" value="Delete Cat">
+                            <div id="cdResultDiv"></div>
+                        </form>
+                    </div>
+                </div>
+                <!-- readme -->
+                <div class="tab-pane fade" id="readme" role="tabpanel" aria-labelledby="readme-tab">
+                    <div class="container p-4 mx-auto">
+                        <p class="p-4 mx-auto col-lg-10">
+                            This is a service designed to track the current weights of cats, and give information on change in weight since last measurement. 
+                            To use the service, register a new cat with an initial weight, then you can update the weight whenever you weigh them again. 
+                            When a cat has been adopted, please remember to remove them from the service so their name can be reused.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "assign3",
+  "version": "1.0.0",
+  "description": "Node.js application for assignment 3",
+  "main": "app.js",
+  "scripts": {
+    "build": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "assignment",
+    "3"
+  ],
+  "author": "Naomi Nottingham",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
